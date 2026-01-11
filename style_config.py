@@ -4,34 +4,20 @@ import streamlit as st
 def load_css():
     st.markdown("""
         <style>
-        /* --- 1. FORCE BACKGROUND --- */
         .stApp {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(to right, #ff512f, #dd2476); /* Pink/Orange */
             background-attachment: fixed;
-            background-size: cover;
         }
         
-        /* --- 2. MAKE TEXT READABLE --- */
-        h1, h2, h3, h4, h5, h6, p, div, span, label {
+        /* Text color must be white to stand out */
+        h1, h2, h3, p, label {
             color: white !important;
         }
-        
-        /* --- 3. WHITE CARDS FOR INPUTS --- */
-        /* This targets the input text area to keep it white and readable */
+
+        /* Make the text input boxes white so users can see what they type */
         .stTextArea textarea {
-            background-color: #ffffff !important;
-            color: #000000 !important;
-        }
-        
-        /* --- 4. BUTTON STYLING --- */
-        .stButton>button {
-            background: #ff4b1f;  /* Bright Orange button for contrast */
-            background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);
-            background: linear-gradient(to right, #ff9068, #ff4b1f);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
+            background-color: white !important;
+            color: black !important;
         }
         </style>
     """, unsafe_allow_html=True)
