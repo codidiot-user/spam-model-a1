@@ -36,7 +36,7 @@ st.write("The image below illustrates the model's training process or architectu
 # Make sure your image_3041af.jpg is in the 'assets' folder!
 try:
     image = Image.open('assets/image_3041af.png')
-    st.image(image, caption="Figure 1: Model Architecture / Training Results", use_column_width=True)
+    st.image(image, caption="Our model working architecture", use_column_width=True)
 except FileNotFoundError:
     st.warning("⚠️ Image not found. Please ensure 'image_3041af.jpg' is placed inside the 'assets' folder.")
 
