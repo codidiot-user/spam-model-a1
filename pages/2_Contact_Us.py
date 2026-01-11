@@ -26,7 +26,7 @@ with col2:
     ### 🐙 GitHub / Project Page
     View the source code or contribute:
     
-    [**https://github.com/codidiot-user/spam-model-a1**](https://github.com/codidiot-user/ai-based-spam-detection)
+    [**https://github.com/codidiot-user/spam-model-a1**](https://github.com/codidiot-user/spam-model-a1)
     """)
 
 st.divider()
