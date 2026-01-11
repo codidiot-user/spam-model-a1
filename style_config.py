@@ -4,48 +4,34 @@ import streamlit as st
 def load_css():
     st.markdown("""
         <style>
-        /* --- Global App Styling --- */
+        /* --- 1. FORCE BACKGROUND --- */
         .stApp {
-            # background: linear-gradient(to right bottom, #0f0c29, #302b63, #24243e); # Optional darker gradient background
-            background-color: #f4f6f9; # A clean light gray background
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+            background-size: cover;
         }
         
-        /* --- Containers and Cards --- */
-        [data-testid="stVerticalBlock"] > [style*="flex-direction: column;"] > [data-testid="stVerticalBlock"] {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        /* --- 2. MAKE TEXT READABLE --- */
+        h1, h2, h3, h4, h5, h6, p, div, span, label {
+            color: white !important;
         }
-
-        /* --- Custom headers --- */
-        h1 {
-            color: #1a237e;
-            font-weight: 800;
+        
+        /* --- 3. WHITE CARDS FOR INPUTS --- */
+        /* This targets the input text area to keep it white and readable */
+        .stTextArea textarea {
+            background-color: #ffffff !important;
+            color: #000000 !important;
         }
-        h2, h3 {
-            color: #283593;
-        }
-
-        /* --- Stylish Buttons --- */
+        
+        /* --- 4. BUTTON STYLING --- */
         .stButton>button {
-            background: linear-gradient(45deg, #4b6cb7, #182848);
+            background: #ff4b1f;  /* Bright Orange button for contrast */
+            background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);
+            background: linear-gradient(to right, #ff9068, #ff4b1f);
             color: white;
             border: none;
             border-radius: 25px;
-            padding: 0.5rem 1.5rem;
             font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .stButton>button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(75, 108, 183, 0.4);
-        }
-        
-        /* --- Metrics Styling (for About Page) --- */
-        [data-testid="stMetricValue"] {
-            color: #1a237e;
-            font-size: 2.5rem !important;
         }
         </style>
     """, unsafe_allow_html=True)
