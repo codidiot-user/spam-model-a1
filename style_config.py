@@ -1,36 +1,37 @@
 # File: style_config.py
 import streamlit as st
-import base64
-
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
 
 def load_css():
-    # Make sure 'assets/background.jpg' exists or change the name below!
-    # For now, let's assume you put an image named 'background.jpg' in assets
-    # img_file = "assets/image_3041af.jpg" 
-    
-    # If you don't have a background image ready, use this placeholder URL:
-    background_url = "https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-    
-    st.markdown(f"""
+    st.markdown("""
         <style>
-        .stApp {{
-            background-image: url("{background_url}");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* --- 1. FORCE BACKGROUND --- */
+        .stApp {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             background-attachment: fixed;
-        }}
+            background-size: cover;
+        }
         
-        /* Add a semi-transparent black box behind text so it's readable */
-        .stMarkdown, h1, h2, h3 {{
-            background-color: rgba(0, 0, 0, 0.6); 
-            padding: 10px;
-            border-radius: 10px;
+        /* --- 2. MAKE TEXT READABLE --- */
+        h1, h2, h3, h4, h5, h6, p, div, span, label {
             color: white !important;
-        }}
+        }
+        
+        /* --- 3. WHITE CARDS FOR INPUTS --- */
+        /* This targets the input text area to keep it white and readable */
+        .stTextArea textarea {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+        
+        /* --- 4. BUTTON STYLING --- */
+        .stButton>button {
+            background: #ff4b1f;  /* Bright Orange button for contrast */
+            background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);
+            background: linear-gradient(to right, #ff9068, #ff4b1f);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
         </style>
     """, unsafe_allow_html=True)
