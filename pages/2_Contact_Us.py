@@ -18,7 +18,7 @@ with col1:
     ### 📧 Email Us
     For general inquiries or collaboration:
     
-    **support@spamdetector.ai** *(Replace with your actual email)*
+    **spammodel123@gmail.com**
     """)
 
 with col2:
